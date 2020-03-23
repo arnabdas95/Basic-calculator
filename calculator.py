@@ -101,7 +101,7 @@ def fun_cal(num):
         flag= False
         end=False
 
-        print(expression)
+        
 
 
 
@@ -118,21 +118,16 @@ def remove_leading_zero(txt):
     new = ""
     count = 1
     x = re.split(r"\D+", txt)
-    print(x)
-    #print(txt)
     y = re.split("\d+", txt)
-    # y = re.sub("\s", "", txt)
-    print(y)
     sign_len = len(y)
     for i in range(0, len(x)):
         x[i] = str(int(x[i]))
-    print(x)
+
     for i in x:
         new = new + i
-
         if sign_len != 1:
             new = new + y[count]
-            sign_len - 1
+            sign_len-=1
             count += 1
     return new
 
