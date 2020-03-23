@@ -79,7 +79,6 @@ def fun_num(num):
     result.delete(0,END)
     result.insert(0,str(pre_num)+str((num)))
     expression=(result.get())
-    print(expression)
     flag=True
     end=False
 
@@ -101,7 +100,7 @@ def fun_cal(num):
         flag= False
         end=False
 
-        
+
 
 
 
