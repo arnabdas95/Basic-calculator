@@ -145,11 +145,11 @@ def fun_equal():
         try:
             result.delete(0, END)
             result.insert(0,eval(expression))
-            print(expression)
+
         except Exception as e:
             s=str(e)
             result.insert(0,s)
-            print(s)
+
 
         finally:
             end=True
