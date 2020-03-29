@@ -57,7 +57,8 @@ button_equal=Button(root,text="=",padx=41,pady=20, borderwidth=1,command=lambda:
 
 
 #entry for display result
-result=Entry(root,borderwidth=5,width=60)
+resultval=IntVar()
+result=Entry(root,borderwidth=5,width=60,textvariable=resultval )
 result.grid(row=0,column=0,columnspan=30)
 
 
@@ -103,7 +104,16 @@ def fun_cal(num):
 
 
 
-
+#function for validating the text field.take only numeric value and discard other keys
+def validateinput(input):
+    if input.isdigit():
+        return True
+    elif input== "":
+        return True
+    else:
+        return False
+checkinput=root.register(validateinput)
+result.config(validate="key",validatecommand=(checkinput,'%P'))
 
 
 #function for clear the screen
